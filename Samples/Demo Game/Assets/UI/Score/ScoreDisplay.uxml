@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="root" style="flex-grow: 1;" picking-mode="Ignore">
+        <Style src="project://database/Assets/UI/Score/ScoreDisplay.uss" />
+        <ui:Label name="score-label" text="Score: 0" picking-mode="Ignore" />
+        <ui:Label name="status-label" text="" picking-mode="Ignore" />
+        <ui:VisualElement name="button-group" picking-mode="Ignore">
+            <ui:Button name="save-button" text="Save" />
+            <ui:Button name="load-button" text="Load" />
+            <ui:Button name="reset-button" text="Reset" />
+            <ui:Button name="clear-button" text="Clear" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
