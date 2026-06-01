@@ -285,12 +285,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324e9fb5e5b140b6af9c8db10c2e2add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  componentId: d58b8e82-3061-4632-b88c-dde098b83e61
+  componentId: fe449ae6-7650-4297-bbad-d5fb79cd4282
   editorSelectionDepth: 3
   isExpanded: 1
-  selectedSavePaths:
-  - d9e0497f-a3e4-4870-a3f9-289c6201c249.p|localPosition
-  - d9e0497f-a3e4-4870-a3f9-289c6201c249.p|name
+  selectedSavePaths: []
   selectViewMode: 0
   sceneId: 97A35FD8
   sceneName: SampleScene
@@ -298,17 +296,17 @@ MonoBehaviour:
   prefabId: 
   prefabResourcesPath: 
   trackedComponents:
-  - id: d9e0497f-a3e4-4870-a3f9-289c6201c249
+  - id: 3789522d-47f3-4f10-9184-ee95baff90e2
     component: {fileID: 8889449}
-  - id: 0f2601c9-200b-4478-9bfe-405b83f6dc44
+  - id: 170760e2-3014-411f-9e9c-53b894cf18b6
     component: {fileID: 8889448}
-  - id: b472e549-3f09-45f0-b389-08ebc43eafca
+  - id: 71a03a1b-bb5c-4ab4-9d7d-1f83fc0d642b
     component: {fileID: 8889447}
-  - id: c3965ca0-66f1-447a-90ca-3c5c812cd450
+  - id: d4c69b3f-5028-48a8-b9fd-265986968849
     component: {fileID: 8889446}
-  - id: 1a24f27c-4ff1-447c-84cf-40474a7c62d2
+  - id: 8307768f-b54f-49a8-9fd5-ea84dd99976a
     component: {fileID: 8889445}
-  - id: d58b8e82-3061-4632-b88c-dde098b83e61
+  - id: fe449ae6-7650-4297-bbad-d5fb79cd4282
     component: {fileID: 8889444}
 --- !u!1 &330585543
 GameObject:
@@ -730,22 +728,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324e9fb5e5b140b6af9c8db10c2e2add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  componentId: 8eaaf281-e239-48f4-901f-ec469cb22363
+  componentId: 
   editorSelectionDepth: 3
   isExpanded: 1
-  selectedSavePaths:
-  - 8eaaf281-e239-48f4-901f-ec469cb22363.f|Score
+  selectedSavePaths: []
   selectViewMode: 0
   sceneId: 97A35FD8
   sceneName: SampleScene
   runtimeId: 
   prefabId: 
   prefabResourcesPath: 
-  trackedComponents:
-  - id: d7fd0f68-e908-4d64-970f-684cdce3a726
-    component: {fileID: 1750346516}
-  - id: 8eaaf281-e239-48f4-901f-ec469cb22363
-    component: {fileID: 1750346517}
+  trackedComponents: []
 --- !u!1 &1875997060
 GameObject:
   m_ObjectHideFlags: 0
