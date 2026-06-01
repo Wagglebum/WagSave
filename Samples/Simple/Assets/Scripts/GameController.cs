@@ -1,17 +1,23 @@
+// -------------------------------------------------------------------------------------------------
+// WaggleBum - WagSave
+//  Copyright (c) 2026 WaggleBum, Inc. All Rights Reserved.
+//
+// File: GameController.cs
+// -------------------------------------------------------------------------------------------------
 using UnityEngine;
-#if WAGGLEBUM_WAGS
+#if WAGGLEBUM_WAGSAVE
 using WaggleBum.WagSave;
 #endif
 
 public class GameController : MonoBehaviour
 {
-#if WAGGLEBUM_WAGS
+#if WAGGLEBUM_WAGSAVE
     private WagSave _wagSave;
 #endif
 
     public static GameController Instance { get; private set; }
 
-    [Header("Enemy Spawning")]
+    [Header("Enemy Spawner")]
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private int enemyCount = 5;
     [SerializeField] private float spawnRadius = 8f;
@@ -37,15 +43,17 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-#if WAGGLEBUM_WAGS
+#if WAGGLEBUM_WAGSAVE
         _wagSave = WagSave.GetInstance();
+#else
+        Debug.LogError("WagSave is not installed. Please install the WaggleBum WagSave package.");
 #endif
         SpawnEnemies();
     }
 
-#if WAGGLEBUM_WAGS
     private void SetupSaveEvents()
     {
+#if WAGGLEBUM_WAGSAVE
         _wagSave.OnSaveCompleted += () =>
         {
             ScoreManager.Instance?.SetStatus("Saved");
@@ -55,8 +63,10 @@ public class GameController : MonoBehaviour
         {
             ScoreManager.Instance?.SetStatus("Loaded");
         };
-    }
+#else
+        Debug.LogError("WagSave is not installed. Please install the WaggleBum WagSave package.");
 #endif
+    }
 
     private void SpawnEnemies()
     {
@@ -73,15 +83,19 @@ public class GameController : MonoBehaviour
 
     public void OnSave()
     {
-#if WAGGLEBUM_WAGS
+#if WAGGLEBUM_WAGSAVE
         _wagSave.Save();
+#else
+        Debug.LogError("WagSave is not installed. Please install the WaggleBum WagSave package.");
 #endif
     }
 
     public void OnLoad()
     {
-#if WAGGLEBUM_WAGS
+#if WAGGLEBUM_WAGSAVE
         _wagSave.Load();
+#else
+        Debug.LogError("WagSave is not installed. Please install the WaggleBum WagSave package.");
 #endif
     }
 

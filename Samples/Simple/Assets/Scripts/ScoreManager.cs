@@ -1,3 +1,9 @@
+// -------------------------------------------------------------------------------------------------
+// WaggleBum - WagSave
+//  Copyright (c) 2026 WaggleBum, Inc. All Rights Reserved.
+//
+// File: ScoreManager.cs
+// -------------------------------------------------------------------------------------------------
 using UnityEngine;
 using UnityEngine.UIElements;
 

@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿// -------------------------------------------------------------------------------------------------
+// WaggleBum - WagSave
+//  Copyright (c) 2026 WaggleBum, Inc. All Rights Reserved.
+//
+// File: ReadmeEditor.cs
+// -------------------------------------------------------------------------------------------------
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;

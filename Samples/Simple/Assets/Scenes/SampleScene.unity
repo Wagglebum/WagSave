@@ -285,11 +285,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324e9fb5e5b140b6af9c8db10c2e2add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  componentId: 24911aec-e369-42bd-98b8-cd5cf6531dad
+  componentId: d58b8e82-3061-4632-b88c-dde098b83e61
   editorSelectionDepth: 3
   isExpanded: 1
   selectedSavePaths:
-  - cb9e527b-4ac7-4100-810b-54160baee43b.p|localPosition
+  - d9e0497f-a3e4-4870-a3f9-289c6201c249.p|localPosition
+  - d9e0497f-a3e4-4870-a3f9-289c6201c249.p|name
   selectViewMode: 0
   sceneId: 97A35FD8
   sceneName: SampleScene
@@ -297,17 +298,17 @@ MonoBehaviour:
   prefabId: 
   prefabResourcesPath: 
   trackedComponents:
-  - id: cb9e527b-4ac7-4100-810b-54160baee43b
+  - id: d9e0497f-a3e4-4870-a3f9-289c6201c249
     component: {fileID: 8889449}
-  - id: 896251e8-9f18-4b63-80b2-0fefb434f2e7
+  - id: 0f2601c9-200b-4478-9bfe-405b83f6dc44
     component: {fileID: 8889448}
-  - id: 8440e6d9-86bb-4ad0-b58f-e034e0a0331f
+  - id: b472e549-3f09-45f0-b389-08ebc43eafca
     component: {fileID: 8889447}
-  - id: 6759ccbe-9cfe-44a0-bbb0-595fdd5bdd07
+  - id: c3965ca0-66f1-447a-90ca-3c5c812cd450
     component: {fileID: 8889446}
-  - id: ed1f8390-00cb-4e5e-b856-5c031b971907
+  - id: 1a24f27c-4ff1-447c-84cf-40474a7c62d2
     component: {fileID: 8889445}
-  - id: 24911aec-e369-42bd-98b8-cd5cf6531dad
+  - id: d58b8e82-3061-4632-b88c-dde098b83e61
     component: {fileID: 8889444}
 --- !u!1 &330585543
 GameObject:
@@ -729,11 +730,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324e9fb5e5b140b6af9c8db10c2e2add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  componentId: 4fe2fe0d-23a6-4936-91db-ed996cdde877
+  componentId: 8eaaf281-e239-48f4-901f-ec469cb22363
   editorSelectionDepth: 3
   isExpanded: 1
   selectedSavePaths:
-  - 4fe2fe0d-23a6-4936-91db-ed996cdde877.f|Score
+  - 8eaaf281-e239-48f4-901f-ec469cb22363.f|Score
   selectViewMode: 0
   sceneId: 97A35FD8
   sceneName: SampleScene
@@ -741,9 +742,9 @@ MonoBehaviour:
   prefabId: 
   prefabResourcesPath: 
   trackedComponents:
-  - id: 294c3b9c-2816-487e-a83a-9f4eafe3f6f3
+  - id: d7fd0f68-e908-4d64-970f-684cdce3a726
     component: {fileID: 1750346516}
-  - id: 4fe2fe0d-23a6-4936-91db-ed996cdde877
+  - id: 8eaaf281-e239-48f4-901f-ec469cb22363
     component: {fileID: 1750346517}
 --- !u!1 &1875997060
 GameObject:

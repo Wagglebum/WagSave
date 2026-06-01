@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1505150666508261111}
   - component: {fileID: 7366390127566672316}
   - component: {fileID: 7914301866912064817}
-  - component: {fileID: 7670876158352718945}
+  - component: {fileID: 3496927854449089902}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -126,7 +126,7 @@ MonoBehaviour:
   waypointReachedDistance: 0.1
   boundaryRadius: 10
   boundaryCenter: {fileID: 0}
---- !u!114 &7670876158352718945
+--- !u!114 &3496927854449089902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,11 +138,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324e9fb5e5b140b6af9c8db10c2e2add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  componentId: 6f533351-daea-4d65-90a7-fd420a21002f
+  componentId: 101e8897-e3f7-40c4-b744-953b97c65225
   editorSelectionDepth: 3
   isExpanded: 1
   selectedSavePaths:
-  - ce5cceb3-35b2-4f87-84d7-7947a6ae603e.p|localPosition
+  - a578cacd-db1d-4cfa-98ca-fc824afcc252.p|localPosition
+  - a578cacd-db1d-4cfa-98ca-fc824afcc252.p|name
   selectViewMode: 0
   sceneId: 
   sceneName: 
@@ -150,13 +151,13 @@ MonoBehaviour:
   prefabId: 12bbc872a71454191a791365f52f1f3f
   prefabResourcesPath: Enemy
   trackedComponents:
-  - id: ce5cceb3-35b2-4f87-84d7-7947a6ae603e
+  - id: a578cacd-db1d-4cfa-98ca-fc824afcc252
     component: {fileID: 2528174798610759128}
-  - id: 76406ded-3de3-49d8-b8ca-54874926aa69
+  - id: f81af542-6e04-4aca-91ba-6b6302ff9aad
     component: {fileID: 2233910283170352476}
-  - id: 94abaa31-5279-4634-a8bf-3716d5495251
+  - id: f6fe4734-b5da-4ea9-af62-640db5994007
     component: {fileID: 1505150666508261111}
-  - id: 21ef1c31-ed18-4dae-a6dc-3a87cc52f241
+  - id: a8c33b5c-f3c5-4399-b1a4-fc6ef246d5e4
     component: {fileID: 7366390127566672316}
-  - id: 6f533351-daea-4d65-90a7-fd420a21002f
+  - id: 101e8897-e3f7-40c4-b744-953b97c65225
     component: {fileID: 7914301866912064817}
