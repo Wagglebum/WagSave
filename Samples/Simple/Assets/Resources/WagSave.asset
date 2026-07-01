@@ -48,12 +48,12 @@ MonoBehaviour:
       scenePaths: []
       enabledScenes: []
     SaveSlots:
-      IsEnabled: 0
-      IncludeScreenshotThumbnail: 0
+      IsEnabled: 1
+      IncludeScreenshotThumbnail: 1
       SlotListDestinationId: wagsave_json
       SlotDestinationId: wagsave_json
       ListType: 1
-      Capacity: 0
+      Capacity: 4
       OverwriteAtCapacity: 0
       SlotListFileName: SlotList
       SlotListFileExtension: slots

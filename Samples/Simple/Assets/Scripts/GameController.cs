@@ -7,6 +7,7 @@
 using UnityEngine;
 #if WAGGLEBUM_WAGSAVE
 using WaggleBum.WagSave;
+using WaggleBum.WagSave.Core.SaveSlots;
 #endif
 
 public class GameController : MonoBehaviour
@@ -26,9 +27,25 @@ public class GameController : MonoBehaviour
     [SerializeField] private int Score;
     public int CurrentScore => Score;
 
+    // Tracks seconds played since the last load (or since the game started).
+    // On save this is added to the slot's existing TotalPlaySeconds.
+    // On load it is reset to 0 (the slot value becomes the new baseline).
+    private float _sessionPlaySeconds;
+
+    // The accumulated seconds already stored in the slot that was loaded.
+    // When we save we write _slotBaseSeconds + _sessionPlaySeconds.
+    private float _slotBaseSeconds;
+
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Update()
+    {
+        // Only accumulate time while the game is actually running (timeScale > 0
+        // is set to 0 by the save-slots UI while it is open).
+        _sessionPlaySeconds += Time.deltaTime;
     }
 
     public void AddScore(int amount = 1)
@@ -45,27 +62,60 @@ public class GameController : MonoBehaviour
     {
 #if WAGGLEBUM_WAGSAVE
         _wagSave = WagSave.GetInstance();
+        SetupSaveEvents();
 #else
         Debug.LogError("WagSave is not installed. Please install the WaggleBum WagSave package.");
 #endif
         SpawnEnemies();
     }
 
+    private void OnDestroy()
+    {
+#if WAGGLEBUM_WAGSAVE
+        if (_wagSave != null)
+        {
+            _wagSave.OnBeforeSaveSlot -= OnBeforeSaveSlot;
+            _wagSave.OnAfterLoadSlot  -= OnAfterLoadSlot;
+            _wagSave.OnSaveCompleted  -= OnSaveCompleted;
+            _wagSave.OnLoadCompleted  -= OnLoadCompleted;
+        }
+#endif
+    }
+
     private void SetupSaveEvents()
     {
 #if WAGGLEBUM_WAGSAVE
-        _wagSave.OnSaveCompleted += () =>
-        {
-            ScoreManager.Instance?.SetStatus("Saved");
-        };
+        _wagSave.OnBeforeSaveSlot += OnBeforeSaveSlot;
+        _wagSave.OnAfterLoadSlot  += OnAfterLoadSlot;
 
-        _wagSave.OnLoadCompleted += () =>
-        {
-            ScoreManager.Instance?.SetStatus("Loaded");
-        };
-#else
-        Debug.LogError("WagSave is not installed. Please install the WaggleBum WagSave package.");
+        _wagSave.OnSaveCompleted += OnSaveCompleted;
+        _wagSave.OnLoadCompleted += OnLoadCompleted;
 #endif
+    }
+
+#if WAGGLEBUM_WAGSAVE
+    private void OnBeforeSaveSlot(SaveSlot slot)
+    {
+        // Write the total accumulated play time into the slot before it is persisted.
+        slot.TotalPlaySeconds = _slotBaseSeconds + _sessionPlaySeconds;
+    }
+
+    private void OnAfterLoadSlot(SaveSlot slot)
+    {
+        // Seed the baseline from the loaded slot so the next save accumulates on top.
+        _slotBaseSeconds    = slot.TotalPlaySeconds;
+        _sessionPlaySeconds = 0f;
+    }
+#endif
+
+    private void OnSaveCompleted()
+    {
+        ScoreManager.Instance?.SetStatus("Saved");
+    }
+
+    private void OnLoadCompleted()
+    {
+        ScoreManager.Instance?.SetStatus("Loaded");
     }
 
     private void SpawnEnemies()

@@ -288,7 +288,9 @@ MonoBehaviour:
   componentId: fe449ae6-7650-4297-bbad-d5fb79cd4282
   editorSelectionDepth: 3
   isExpanded: 1
-  selectedSavePaths: []
+  selectedSavePaths:
+  - 3789522d-47f3-4f10-9184-ee95baff90e2.p|localPosition
+  - 3789522d-47f3-4f10-9184-ee95baff90e2.p|name
   selectViewMode: 0
   sceneId: 97A35FD8
   sceneName: SampleScene
@@ -728,17 +730,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324e9fb5e5b140b6af9c8db10c2e2add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  componentId: 
+  componentId: 1edc183a-006c-4c4f-bd0f-7174be618b13
   editorSelectionDepth: 3
   isExpanded: 1
-  selectedSavePaths: []
+  selectedSavePaths:
+  - 1edc183a-006c-4c4f-bd0f-7174be618b13.f|Score
   selectViewMode: 0
   sceneId: 97A35FD8
   sceneName: SampleScene
   runtimeId: 
   prefabId: 
   prefabResourcesPath: 
-  trackedComponents: []
+  trackedComponents:
+  - id: 039c880e-f1c3-4cc8-b800-b26c55e09b1d
+    component: {fileID: 1750346516}
+  - id: 1edc183a-006c-4c4f-bd0f-7174be618b13
+    component: {fileID: 1750346517}
 --- !u!1 &1875997060
 GameObject:
   m_ObjectHideFlags: 0
